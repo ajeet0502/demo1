@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My App</title>
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../bootstrap/dist/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="nav nav-pills">
+		  <li role="presentation" class="active"><a href="/">Home</a></li>
+		  <li role="presentation"><a href="/contact">Contact</a></li>
+		  <li role="presentation"><a href="/about">About</a></li>
+		</ul>
+		<h3><a href='/'>Back</a></h3>
+		<% if (print1.length) { %>
+		  <ul>
+			<% print1.forEach(function(name){ %>
+			  <li>Full Name:  <%= name.fld_fname %> <%= name.fld_lname %></li>
+			  <li>Address:  <%= name.fld_address %></li>
+			  <li>Date of Joining:  <%= name.fld_doj %></li>
+			  <li>Date of Birth:  <%= name.fld_boj %></li>
+			<% }) %>
+		  </ul>
+		<% } %>
+	</div>
+</body>
+</html>	

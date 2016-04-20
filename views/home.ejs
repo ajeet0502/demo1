@@ -1,0 +1,19 @@
+<% include header.ejs %>
+<body>
+	<div class="container">
+		<ul class="nav nav-pills">
+		  <li role="presentation" class="active"><a href="/">Home</a></li>
+		  <li role="presentation"><a href="/contact">Contact</a></li>
+		  <li role="presentation"><a href="/about">About</a></li>
+		</ul>
+		<h1>Employee list</h1>
+		<% if (print.length) { %>
+		  <ul>
+			<% print.forEach(function(name){ %>
+			  <li><a href='/home/:<%= name.fld_eid %>'><%= name.fld_fname %> <%= name.fld_lname %></a></li>
+			<% }) %>
+		  </ul>
+		<% } %>
+	</div>
+</body>
+</html>	
